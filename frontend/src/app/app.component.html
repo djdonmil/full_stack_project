@@ -1,0 +1,43 @@
+<h1 class="d-flex justify-content-center mt-3">Minddeft Task</h1>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 my-4">
+        <input type="text" placeholder="Search for wallet address.." class="form-control" (keyup)="getTransactionList($event)">
+    </div>
+    <div class="col-4"></div>
+</div>
+<div class="row">
+    <div class="col-5"></div>
+</div>
+<div class=" my-4 d-flex justify-content-center">
+    <button (click)="download()" class="btn btn-primary">Download PDF</button>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <div class="text-danger">{{error}}</div>
+    <div class="row">
+        <div class="col-8">
+            <table class="table table-striped w-50" *ngIf="!error">
+                <thead>
+                    <tr>
+                        <th>Txhash</th>
+                        <th>DateTime</th>
+                        <th>Address</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let transaction of transactiondata">
+                        <td>{{ transaction.Txhash }}</td>
+                        <td>{{ transaction.DateTime }}</td>
+                        <td>{{ transaction.Address }}</td>
+                        <td>{{ transaction.Amount }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

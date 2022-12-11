@@ -1,0 +1,19 @@
+{
+    "name": "full_stack_projeect",
+    "version": "1.0.0",
+    "description": "For test task",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/djdonmil/full_stack_projeect.git"
+    },
+    "author": "Dhrumil Shah",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/djdonmil/full_stack_project/issues"
+    },
+    "homepage": "https://github.com/djdonmil/full_stack_project#readme"
+}
